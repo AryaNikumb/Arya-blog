@@ -10,10 +10,10 @@ from forms import CreatePostForm, RegisterForm, LoginForm, CommentForm
 from flask_gravatar import Gravatar
 from functools import wraps
 import smtplib
-import requests
+import os
 
-EMAIL = "amanwifi@yahoo.com"
-PASSWORD = "jwzrtodcpfqordgw"
+EMAIL = os.getenv("EMAIL_ID")
+PASSWORD = os.getenv("PASSWORD")
 
 
 app = Flask(__name__)
